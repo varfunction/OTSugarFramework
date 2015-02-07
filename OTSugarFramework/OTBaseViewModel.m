@@ -7,6 +7,7 @@
 //
 
 #import "OTBaseViewModel.h"
+#import <BlocksKit.h>
 
 @interface OTBaseViewModel ()
 
@@ -21,6 +22,11 @@
     if (self = [super init]) {
         self.model = model;
     }
+    
+    NSArray *test = [NSArray array];
+    [test bk_map:^id(id obj) {
+        return obj;
+    }];
     return self;
 }
 
